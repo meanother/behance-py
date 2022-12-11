@@ -1,5 +1,17 @@
 # behance-py
-Free download of pictures from behance.net
+> Free download of pictures from behance.net
+
+[![PyPI Version][pypi-image]][pypi-url]
+[![Build Status][build-image]][build-url]
+
+...
+
+<!-- Badges -->
+
+[pypi-image]: https://img.shields.io/pypi/v/podsearch
+[pypi-url]: https://pypi.org/project/podsearch/
+[build-image]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml
 
 
 ## Installation
