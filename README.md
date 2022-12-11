@@ -3,8 +3,8 @@
 
 [![PyPI Version][pypi-image]][pypi-url]
 [![Build Status][build-image]][build-url]
-
-...
+[![Code Coverage][coverage-image]][coverage-url]
+[![Code Quality][quality-image]][quality-url]
 
 <!-- Badges -->
 
@@ -12,6 +12,10 @@
 [pypi-url]: https://pypi.org/project/pybehance/
 [build-image]: https://github.com/meanother/behance-py/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/meanother/behance-py/actions/workflows/build.yml
+[coverage-image]: https://codecov.io/gh/meanother/pybehance/branch/main/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/meanother/pybehance
+[quality-image]: https://api.codeclimate.com/v1/badges/f4db74d41103b03e0025/maintainability
+[quality-url]: https://codeclimate.com/github/meanother/behance-py/maintainability
 
 
 ## Installation
