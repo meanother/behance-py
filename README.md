@@ -8,10 +8,10 @@
 
 <!-- Badges -->
 
-[pypi-image]: https://img.shields.io/pypi/v/podsearch
-[pypi-url]: https://pypi.org/project/podsearch/
-[build-image]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml
+[pypi-image]: https://img.shields.io/pypi/v/pybehance
+[pypi-url]: https://pypi.org/project/pybehance/
+[build-image]: https://github.com/meanother/behance-py/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/meanother/behance-py/actions/workflows/build.yml
 
 
 ## Installation
