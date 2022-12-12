@@ -5,15 +5,16 @@
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Code Quality][quality-image]][quality-url]
-
+[![Downloads](https://static.pepy.tech/personalized-badge/pybehance?period=total&units=international_system&left_color=yellow&right_color=blue&left_text=Downloads)](https://pepy.tech/project/pybehance)
+[![Downloads](https://static.pepy.tech/personalized-badge/pybehance?period=month&units=international_system&left_color=yellow&right_color=blue&left_text=Downloads)](https://pepy.tech/project/pybehance)
 <!-- Badges -->
 
 [pypi-image]: https://img.shields.io/pypi/v/pybehance
 [pypi-url]: https://pypi.org/project/pybehance/
 [build-image]: https://github.com/meanother/behance-py/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/meanother/behance-py/actions/workflows/build.yml
-[coverage-image]: https://codecov.io/gh/meanother/pybehance/branch/main/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/meanother/pybehance
+[coverage-image]: https://codecov.io/gh/meanother/behance-py/branch/main/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/meanother/behance-py
 [quality-image]: https://api.codeclimate.com/v1/badges/f4db74d41103b03e0025/maintainability
 [quality-url]: https://codeclimate.com/github/meanother/behance-py/maintainability
 
@@ -36,6 +37,4 @@ behance.get_pictures_list(EXAMPLE_URL)
 
 behance.get_data()  # return list
 behance.download_pictures()  # download all pictures
-
-
 ```
