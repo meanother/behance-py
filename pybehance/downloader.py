@@ -57,7 +57,7 @@ class BehanceDownloader:
             except AttributeError:
                 pass
 
-    def get_data(self):
+    def get_data(self) -> list:
         """return pictures list"""
         return self.pictures
 
