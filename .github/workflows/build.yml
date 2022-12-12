@@ -34,7 +34,10 @@ jobs:
               run: |
                   python -m tox
             - name: Upload coverage to Codecov
-              uses: codecov/codecov-action@v1
-              if: contains(env.USING_COVERAGE, matrix.python-version)
+              uses: codecov/codecov-action@v2
+#              if: contains(env.USING_COVERAGE, matrix.python-version)
               with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
+                  filename: coverage.xml
+                  badge: true
                   fail_ci_if_error: true
