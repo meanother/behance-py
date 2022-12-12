@@ -43,6 +43,7 @@ class BehanceDownloader:
 
     def get_pictures_list(self, link: str):
         """collect list of picture urls"""
+        self.pictures = []
         raw_html = self._requests(link)
         tree = BeautifulSoup(raw_html, "html.parser")
 
