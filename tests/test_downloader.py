@@ -37,3 +37,19 @@ def test_get_data():
     assert type(data) == list
     assert len(data) == 9
 
+
+def test_pictures_list():
+    url = "https://www.behance.net/gallery/157806987/Folio-Reader-Types"
+    behance = BehanceDownloader()
+    data = behance.get_pictures_list(url)
+    assert type(data) == list
+    assert len(data) == 9
+
+
+def test_download_pictures():
+    url = "https://www.behance.net/gallery/157806987/Folio-Reader-Types"
+    behance = BehanceDownloader()
+    data = behance.get_pictures_list(url)
+
+    assert type(data) == list
+    assert len(data) == 9

@@ -33,8 +33,7 @@ EXAMPLE_URL = "https://www.behance.net/gallery/157806987/Folio-Reader-Types"
 
 behance = Behance()  # without special path to save pics
 behance = Behance(path_to_save="/path/to/save/example_dir")
-behance.get_pictures_list(EXAMPLE_URL)
+data = behance.get_pictures_list(EXAMPLE_URL)  # return list
 
-behance.get_data()  # return list
 behance.download_pictures()  # download all pictures
 ```
