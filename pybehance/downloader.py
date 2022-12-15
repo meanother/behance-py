@@ -1,7 +1,7 @@
 """
 Base downloader module
 """
-
+import logging
 from pathlib import Path
 from typing import Optional, Union
 
@@ -9,6 +9,8 @@ import httpx
 from bs4 import BeautifulSoup  # type: ignore
 
 from pybehance.settings import BEHANCE_STORAGE_URL
+
+logger = logging.getLogger(__name__)
 
 
 class BehanceDownloader:
@@ -56,13 +58,17 @@ class BehanceDownloader:
                         self.pictures.append(image.split()[0])
             except AttributeError:
                 pass
+        logger.info(f"url {link} has {len(self.pictures)} pictures")
 
     def get_data(self) -> list:
         """return pictures list"""
+        if not self.pictures:
+            self.get_data()
         return self.pictures
 
     def _download(self, link: str):
         """download one picture"""
+        logger.info(f"Download image from url: {link}")
         with httpx.stream("GET", link) as response:
             file_name = link.split("/")[-1]
             path_to_save = Path(self.path_to_save) / file_name if self.path_to_save else file_name
@@ -70,9 +76,11 @@ class BehanceDownloader:
                 for chunk in response.iter_bytes(chunk_size=1024):
                     if chunk:
                         image_file.write(chunk)
+        logger.info(f"image {image_file} saved to {path_to_save}")
 
     def download_pictures(self):
         """download all puctures from link"""
+        logger.info("Start download pictures")
         self.check_path_to_save_exist()
         if not self.pictures:
             self.get_data()
