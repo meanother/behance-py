@@ -82,6 +82,8 @@ class BehanceDownloader:
         logger.info("Start download pictures")
         self.check_path_to_save_exist()
         if not self.pictures:
-            logger.warning(f"pictures list is empty, pls use `get_pictures_list(example behance url)` method")
+            logger.warning(
+                "pictures list is empty, pls use get_pictures_list(example behance url) method"
+            )
         for image_url in self.pictures:
             self._download(image_url)
