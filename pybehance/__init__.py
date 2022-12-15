@@ -5,7 +5,7 @@ import logging
 
 from pybehance.downloader import BehanceDownloader as Behance  # noqa
 
-__version__ = "0.2.2"
+__version__ = "0.2.3"
 
 
 logging.basicConfig(
