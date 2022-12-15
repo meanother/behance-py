@@ -43,7 +43,7 @@ class BehanceDownloader:
         response.raise_for_status()
         return response.text
 
-    def get_pictures_list(self, link: str):
+    def get_pictures_list(self, link: str) -> list:
         """collect list of picture urls"""
         self.pictures = []
         raw_html = self._requests(link)
@@ -59,11 +59,10 @@ class BehanceDownloader:
             except AttributeError:
                 pass
         logger.info(f"url {link} has {len(self.pictures)} pictures")
+        return self.pictures
 
     def get_data(self) -> list:
         """return pictures list"""
-        if not self.pictures:
-            self.get_data()
         return self.pictures
 
     def _download(self, link: str):
@@ -83,6 +82,6 @@ class BehanceDownloader:
         logger.info("Start download pictures")
         self.check_path_to_save_exist()
         if not self.pictures:
-            self.get_data()
+            logger.warning(f"pictures list is empty, pls use `get_pictures_list(example behance url)` method")
         for image_url in self.pictures:
             self._download(image_url)
