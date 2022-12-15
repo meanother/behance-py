@@ -75,7 +75,7 @@ class BehanceDownloader:
                 for chunk in response.iter_bytes(chunk_size=1024):
                     if chunk:
                         image_file.write(chunk)
-        logger.info(f"image {image_file} saved to {path_to_save}")
+        logger.info(f"image {file_name} saved to {path_to_save}")
 
     def download_pictures(self):
         """download all puctures from link"""
